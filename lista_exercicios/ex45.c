@@ -4,12 +4,22 @@ termo e imprimir a soma dos elementos dessa PA */
 #include <stdio.h>
 
 int main() {
+    int primeiro, ultimo, razao, soma = 0;
 
-    printf("Celsius\tFahrenheit\n");
+    printf("Primeiro termo: ");
+    scanf("%d", &primeiro);
 
-    for(int c = 0; c <= 50; c += 10) {
-        printf("%d\t%.2f\n", c, (c * 9.0 / 5.0) + 32);
+    printf("Ultimo termo: ");
+    scanf("%d", &ultimo);
+
+    printf("Razao: ");
+    scanf("%d", &razao);
+
+    for(int i = primeiro; i <= ultimo; i += razao) {
+        soma += i;
     }
+
+    printf("Soma = %d\n", soma);
 
     return 0;
 }
